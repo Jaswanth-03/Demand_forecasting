@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demand Forecasting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('arrow.png') no-repeat right #fff;
+            background-size: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Demand Forecasting</h1>
+        <form method="post" action="/">
+            <label for="brand">Brand:</label>
+            <select id="brand" name="brand" required>
+                <option value="Huawei">Huawei</option>
+                <option value="Sony">Sony</option>
+                <option value="OnePlus">OnePlus</option>
+                <option value="Motorola">Motorola</option>
+                <option value="LG">LG</option>
+                <option value="Apple">Apple</option>
+                <option value="Google">Google</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Oppo">Oppo</option>
+                <option value="Xiaomi">Xiaomi</option>
+            </select>
+
+            <label for="price">Price(USD):</label>
+            <select id="price" name="price" required>
+                <option value="200">200</option>
+                <option value="100">100</option>
+                <option value="900">900</option>
+                <option value="600">600</option>
+                <option value="300">300</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="1300">1300</option>
+                <option value="400">400</option>
+                <option value="700">700</option>
+                <option value="1100">1100</option>
+                <option value="1500">1500</option>
+                <option value="800">800</option>
+                <option value="1400">1400</option>
+                <option value="1200">1200</option>
+            </select>
+
+            <label for="screen_size">Screen Size(inches):</label>
+            <select id="screen_size" name="screen_size" required>
+                <option value="5.2">5.2</option>
+                <option value="4.5">4.5</option>
+                <option value="6.4">6.4</option>
+                <option value="7.0">7.0</option>
+                <option value="6.5">6.5</option>
+                <option value="6.8">6.8</option>
+                <option value="5.5">5.5</option>
+                <option value="6.9">6.9</option>
+                <option value="6.7">6.7</option>
+                <option value="5.0">5.0</option>
+                <option value="4.7">4.7</option>
+                <option value="6.0">6.0</option>
+                <option value="6.2">6.2</option>
+                <option value="5.8">5.8</option>
+            </select>
+
+            <label for="ram">RAM (GB):</label>
+            <select id="ram" name="ram" required>
+                <option value="12">12</option>
+                <option value="3">3</option>
+                <option value="16">16</option>
+                <option value="4">4</option>
+                <option value="2">2</option>
+                <option value="8">8</option>
+                <option value="6">6</option>
+            </select>
+
+            <label for="storage">Storage (GB):</label>
+            <select id="storage" name="storage" required>
+                <option value="128">128</option>
+                <option value="256">256</option>
+                <option value="1024">1024</option>
+                <option value="32">32</option>
+                <option value="512">512</option>
+                <option value="64">64</option>
+            </select>
+
+            <label for="camera">Camera Quality(MP) :</label>
+            <select id="camera" name="camera" required>
+                <option value="8">8</option>
+                <option value="24">24</option>
+                <option value="12">12</option>
+                <option value="48">48</option>
+                <option value="20">20</option>
+                <option value="32">32</option>
+                <option value="16">16</option>
+                <option value="108">108</option>
+                <option value="64">64</option>
+            </select>
+
+            <label for="marketing_budget">Marketing Budget(USD):</label>
+            <select id="marketing_budget" name="marketing_budget" required>
+                <option value="500">500</option>
+                <option value="20000">20000</option>
+                <option value="2000">2000</option>
+                <option value="100">100</option>
+                <option value="5000">5000</option>
+                <option value="10000">10000</option>
+                <option value="1000">1000</option>
+            </select>
+
+            <label for="region">Region:</label>
+            <select id="region" name="region" required>
+                <option value="North America">North America</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="South America">South America</option>
+            </select>
+
+            <label for="Quarter">Quarter:</label>
+            <select id="Quarter" name="Quarter" required>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
+            </select>
+
+            <input type="submit" value="Predict Demand">
+        </form>
+    </div>
+</body>
+</html>

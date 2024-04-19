@@ -1,4 +1,4 @@
-# Mobile Phone Demand Forecasting
+# Smartphone Sales Demand Forecasting
 
 This project aims to build a machine learning model to predict the demand for mobile phones based on various features such as brand, price, screen size, RAM, storage, camera quality, marketing budget, region, and quarter.
 

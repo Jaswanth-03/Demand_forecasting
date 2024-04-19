@@ -36,10 +36,10 @@ To run this project locally, follow these steps:
 ```
 mobile-demand-forecasting/
 ├── app.py
-├── data/
-│   └── data.csv
-├── model/
-│   └── model.pkl
+├──smartphone_data.csv
+├── requirements.txt
+├── model_and_transformer.pkl
+├── demand_forecasting.ipynb
 ├── static/
 │   ├── css/
 │   └── js/

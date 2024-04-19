@@ -19,7 +19,7 @@ To run this project locally, follow these steps:
 
 2. Install the required Python packages:
    ```
-   pip install pandas numpy scikit-learn
+   pip install -r requirements.txt
    ```
 
 3. Run the `app.py` file to start the local server:

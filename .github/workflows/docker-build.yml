@@ -23,23 +23,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
-    - name: Print requirements.txt
-      run: cat requirements.txt
-        
-    - name: Install dependencies
-      run: |
-        pip install --no-cache-dir -r requirements.txt || { echo "Failed to install dependencies"; cat failed_install.log; exit 1; }
-      env:
-        PIP_NO_CACHE_DIR: off
-      continue-on-error: true
-      
-    - name: Upload failed install log
-      uses: actions/upload-artifact@v3
-      if: failure()
-      with:
-        name: failed-install-log
-        path: failed_install.log
-        
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
